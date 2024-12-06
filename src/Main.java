@@ -12,13 +12,15 @@ public class Main {
     public static void main(String[] args) throws Exception {
         String mensagemOriginal = "Michel";
 
+        KeyPair keyPair = geraRSAKeyPair();
+
         System.out.println("A mensagem original é :" + mensagemOriginal);
 
-        byte[] mensagemCifrada = encripta(mensagemOriginal, geraRSAKeyPair().getPublic());
+        byte[] mensagemCifrada = encripta(mensagemOriginal, keyPair.getPublic());
 
         System.out.println("A mensagem cifrada é :" + HexFormat.of().formatHex(mensagemCifrada));
 
-        String mensagemRecuperada = decripta(mensagemCifrada, geraRSAKeyPair().getPrivate());
+        String mensagemRecuperada = decripta(mensagemCifrada, keyPair.getPrivate());
 
         System.out.println("A mensagem recuperada é :" + mensagemRecuperada);
 
