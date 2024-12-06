@@ -7,7 +7,6 @@ import java.security.PublicKey;
 import java.util.Base64;
 import java.util.HexFormat;
 
-//https://deviniciative.wordpress.com/2023/07/04/entendendo-criptografia-e-descriptografia-em-java/
 
 public class Main {
     public static void main(String[] args) throws Exception {
